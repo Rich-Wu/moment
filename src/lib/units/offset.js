@@ -192,7 +192,7 @@ export function setOffsetToParsedOffset() {
         if (tZone != null) {
             this.utcOffset(tZone);
         } else {
-            this.utcOffset(0, true);
+            setOffsetToLocal.apply(this);
         }
     }
     return this;
